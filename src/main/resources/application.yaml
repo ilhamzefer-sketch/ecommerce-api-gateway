@@ -8,12 +8,12 @@ spring:
         webmvc:
           routes:
             - id: ecommerce-auth
-              uri: ${AUTH_SERVICE_URL:http://localhost:8080}
+              uri: ${AUTH_SERVICE_URL:http://localhost:8081}
               predicates:
                 - Path=/api/auth/**,/api/users/**,/api/admin/**,/v3/api-docs/**,/swagger-ui/**,/swagger-ui.html
 
 server:
-  port: ${SERVER_PORT:8081}
+  port: ${SERVER_PORT:8080}
 
 application:
   security:
